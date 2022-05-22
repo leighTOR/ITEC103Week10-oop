@@ -2,11 +2,11 @@
 
 namespace intermediate
 {
-    class mainProgram
+    class Program
     {
         public static void Main(string[] args)
         {
-            boardMarker myMarker = new boardMarker();
+            BoardMarker myMarker = new BoardMarker();
             int choice = 0;
             string msg = string.Empty;
             string userColor = string.Empty;
@@ -43,13 +43,13 @@ namespace intermediate
                                 break;
                         }
                         Console.Write("\n");
-                        myMarker.write(msg);
+                        myMarker.Write(msg);
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.ReadKey(true);
                         break;
                     case 2:
                         Console.WriteLine();
-                        myMarker.refill();
+                        myMarker.Refill();
                         Console.ReadKey(true);
                         break;
                     case 3:
@@ -58,12 +58,12 @@ namespace intermediate
                         Console.Write("Color: ");
                         userColor = Console.ReadLine();
                         Console.Write("\n");
-                        myMarker.changeColor(userColor);
+                        myMarker.ChangeColor(userColor);
                         Console.ReadKey(true);
                         break;
                     case 4:
                         Console.WriteLine();
-                        myMarker.checkStatus();
+                        myMarker.CheckStatus();
                         Console.ReadKey(true);
                         break;
                     case 5:

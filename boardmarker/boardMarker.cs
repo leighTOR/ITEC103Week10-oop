@@ -2,9 +2,9 @@
 
 namespace intermediate
 {
-    public class boardMarker : IDisposable
+    public class BoardMarker : IDisposable
     {
-        public boardMarker()
+        public BoardMarker()
         {
         }
 
@@ -12,21 +12,21 @@ namespace intermediate
         public int content = 100;
         private bool disposedValue;
 
-        public void write(string msg)
+        public void Write(string msg)
         {
             content--;
             Console.WriteLine(msg);
             Console.WriteLine("Remaining ink: " + content);
         }
 
-        public int refill()
+        public int Refill()
         {
             content = 100;
             Console.WriteLine("Remaining ink: " + content);
             return content;
         }
 
-        public void changeColor(string userColor) {
+        public void ChangeColor(string userColor) {
             color = userColor;
             switch (color)
             {
@@ -48,7 +48,7 @@ namespace intermediate
             Console.WriteLine("Marker Color: " + color);
         }
 
-        public void checkStatus()
+        public void CheckStatus()
         {
             Console.WriteLine("Remaining ink: " + content);
             Console.WriteLine("Marker Color: " + color);
@@ -70,7 +70,7 @@ namespace intermediate
         }
 
         // // TODO: override finalizer only if 'Dispose(bool disposing)' has code to free unmanaged resources
-        ~boardMarker()
+        ~BoardMarker()
         {
             // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
             Dispose(disposing: false);
