@@ -16,10 +16,11 @@ namespace intermediate
             Console.WriteLine(msg);
             Console.WriteLine("Remaining ink: " + content);
         }
-        public void refill()
+        public int refill()
         {
-            content++;
+            content = 100;
             Console.WriteLine("Remaining ink: " + content);
+            return content;
         }
         public void changeColor(string userColor) {
             color = userColor;
