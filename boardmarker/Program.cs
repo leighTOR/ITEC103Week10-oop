@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace intermediate
+﻿namespace intermediate
 {
     class Program
     {
@@ -71,6 +69,7 @@ namespace intermediate
                         case 5:
                             Console.WriteLine();
                             myMarker.Dispose();
+                            Console.WriteLine("Disposed unmanaged resources...");
                             Console.ReadKey(true);
                             break;
                         default:
@@ -85,6 +84,7 @@ namespace intermediate
             {
                 Console.WriteLine(ex.ToString());
             }
+
         }
     }
 }

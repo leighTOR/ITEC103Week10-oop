@@ -4,13 +4,11 @@ namespace intermediate
 {
     public class BoardMarker : IDisposable
     {
-        public BoardMarker()
-        {
-        }
-
         public string color = "white";
         public int content = 100;
         private bool disposedValue;
+
+        public BoardMarker() { }
 
         public void Write(string msg)
         {
@@ -40,11 +38,9 @@ namespace intermediate
                     color = "red";
                     break;
                 default:
-                    color =
-           "white";
+                    color = "white";
                     break;
             }
-
             Console.WriteLine("Marker Color: " + color);
         }
 
