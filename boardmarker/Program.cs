@@ -46,6 +46,7 @@ namespace intermediate
                     case 2:
                         Console.Clear();
                         myMarker.refill();
+                        Console.ReadKey();
                         break;
                     case 3:
                         Console.Clear();
@@ -58,13 +59,16 @@ namespace intermediate
                     case 4:
                         Console.Clear();
                         myMarker.checkStatus();
+                        Console.ReadKey(true);
                         break;
                     case 5:
                         Console.Clear();
                         myMarker.Dispose();
+                        Console.ReadKey(true);
                         break;
                     default:
                         Console.WriteLine("Invalid command...");
+                        Console.ReadKey(true);
                         break;
                 }
             }
