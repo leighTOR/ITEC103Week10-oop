@@ -61,7 +61,7 @@ namespace intermediate
                         break;
                     case 5:
                         Console.Clear();
-                        myMarker.dispose();
+                        myMarker.Dispose();
                         break;
                     default:
                         Console.WriteLine("Invalid command...");
