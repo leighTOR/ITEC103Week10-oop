@@ -44,12 +44,12 @@ namespace intermediate
                         Console.ReadKey(true);
                         break;
                     case 2:
-                        Console.Clear();
+                        Console.WriteLine();
                         myMarker.refill();
                         Console.ReadKey();
                         break;
                     case 3:
-                        Console.Clear();
+                        Console.WriteLine();
                         Console.WriteLine("Choose from: White, Blue and Red");
                         Console.Write("Color: ");
                         userColor = Console.ReadLine();
@@ -57,16 +57,17 @@ namespace intermediate
                         myMarker.changeColor(userColor);
                         Console.ReadKey(true); break;
                     case 4:
-                        Console.Clear();
+                        Console.WriteLine();
                         myMarker.checkStatus();
                         Console.ReadKey(true);
                         break;
                     case 5:
-                        Console.Clear();
+                        Console.WriteLine();
                         myMarker.Dispose();
                         Console.ReadKey(true);
                         break;
                     default:
+                        Console.WriteLine();
                         Console.WriteLine("Invalid command...");
                         Console.ReadKey(true);
                         break;
