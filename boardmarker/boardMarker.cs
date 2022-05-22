@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace intermediate
 {
     public class boardMarker : IDisposable
@@ -6,6 +7,7 @@ namespace intermediate
         public boardMarker()
         {
         }
+
         public string color = "white";
         public int content = 100;
         private bool disposedValue;
@@ -16,12 +18,14 @@ namespace intermediate
             Console.WriteLine(msg);
             Console.WriteLine("Remaining ink: " + content);
         }
+
         public int refill()
         {
             content = 100;
             Console.WriteLine("Remaining ink: " + content);
             return content;
         }
+
         public void changeColor(string userColor) {
             color = userColor;
             switch (color)
@@ -43,6 +47,7 @@ namespace intermediate
 
             Console.WriteLine("Marker Color: " + color);
         }
+
         public void checkStatus()
         {
             Console.WriteLine("Remaining ink: " + content);

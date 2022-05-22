@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace intermediate
 {
     class mainProgram
@@ -9,6 +10,7 @@ namespace intermediate
             int choice = 0;
             string msg = string.Empty;
             string userColor = string.Empty;
+
             while (true)
             {
                 Console.Clear();
@@ -20,6 +22,7 @@ namespace intermediate
                 Console.WriteLine("--------------");
                 Console.Write("Command: ");
                 choice = Convert.ToInt32(Console.ReadLine());
+
                 switch (choice)
                 {
                     case 1:
@@ -32,11 +35,12 @@ namespace intermediate
                         {
                             case "blue":
                                 Console.ForegroundColor =
-                                ConsoleColor.Blue; break;
-                            case
-                        "red":
+                                ConsoleColor.Blue;
+                                break;
+                            case "red":
                                 Console.ForegroundColor =
-                                ConsoleColor.Red; break;
+                                ConsoleColor.Red;
+                                break;
                         }
                         Console.Write("\n");
                         myMarker.write(msg);
@@ -46,7 +50,7 @@ namespace intermediate
                     case 2:
                         Console.WriteLine();
                         myMarker.refill();
-                        Console.ReadKey();
+                        Console.ReadKey(true);
                         break;
                     case 3:
                         Console.WriteLine();
@@ -55,7 +59,8 @@ namespace intermediate
                         userColor = Console.ReadLine();
                         Console.Write("\n");
                         myMarker.changeColor(userColor);
-                        Console.ReadKey(true); break;
+                        Console.ReadKey(true);
+                        break;
                     case 4:
                         Console.WriteLine();
                         myMarker.checkStatus();
